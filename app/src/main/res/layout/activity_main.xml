@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/soundVolumeET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="sound volume"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/musicVolumeET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="music volume"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/soundVolumeET"
+        app:layout_constraintStart_toStartOf="@+id/soundVolumeET"
+        app:layout_constraintTop_toBottomOf="@+id/soundVolumeET" />
+
+    <EditText
+        android:id="@+id/movementDurationET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="movement duration"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/musicVolumeET"
+        app:layout_constraintStart_toStartOf="@+id/musicVolumeET"
+        app:layout_constraintTop_toBottomOf="@+id/musicVolumeET" />
+
+    <Switch
+        android:id="@+id/isAuthorizedSwith"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Is authorized"
+        android:textOff="Not authorized"
+        android:textOn="Authorized"
+        app:layout_constraintEnd_toEndOf="@+id/movementDurationET"
+        app:layout_constraintStart_toStartOf="@+id/movementDurationET"
+        app:layout_constraintTop_toBottomOf="@+id/movementDurationET" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="save"
+        app:layout_constraintStart_toStartOf="@+id/isAuthorizedSwith"
+        app:layout_constraintTop_toBottomOf="@+id/isAuthorizedSwith" />
+
+    <Button
+        android:id="@+id/readBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="read"
+        app:layout_constraintStart_toStartOf="@+id/saveBtn"
+        app:layout_constraintTop_toBottomOf="@+id/saveBtn" />
+
+    <TextView
+        android:id="@+id/prefsContentTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:lines="100"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/readBtn"
+        app:layout_constraintTop_toBottomOf="@+id/readBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
